@@ -40,16 +40,6 @@
             background-color: #fafafa;
         }
 
-        .icon {
-            font-family: "Icons";
-            font-style: normal;
-            line-height: 1em;
-        }
-
-        .icon-download::before {
-            content: "\ea01";
-        }
-
         .root-container {
             width: 100%;
             max-width: 1100px;
@@ -60,6 +50,11 @@
             font-size: 3em;
             line-height: 3em;
             font-weight: normal;
+        }
+
+        .separator {
+            margin: 2em 0;
+            border-bottom: 1px solid black;
         }
 
         .about-section {
@@ -97,7 +92,18 @@
         .link-icon {
             display: block;
             width: 100%;
+            font-family: "Icons";
             font-size: 4em;
+            font-style: normal;
+            line-height: 1em;
+        }
+
+        .link-icon-download::before {
+            content: "\ea01";
+        }
+
+        .link:hover .link-icon-download::before {
+            content: "\ea02";
         }
 
         .link-label {
@@ -123,12 +129,14 @@
                 I'm also happy married and a father of a lovely boy.
             </p>
         </section>
+        <div class="separator"></div>
         <section class="links-section">
             <a class="link" href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf">
-                <i class="link-icon icon icon-download"></i>
+                <i class="link-icon link-icon-download"></i>
                 <div class="link-label">Download</div>
             </a>
         </section>
+        <div class="separator"></div>
         <!-- github
         linkedin
         Email -->
