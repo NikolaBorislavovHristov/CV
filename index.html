@@ -52,13 +52,17 @@
 
         .header h1 {
             font-size: 3em;
-            line-height: 1.4em;
+            line-height: 1em;
             font-weight: normal;
         }
 
-        .header .email {
+        .header .email, .header .phone {
             font-size: 2em;
-            line-height: 1.4em;
+            line-height: 1em;
+        }
+
+        .header .email {
+            margin: 1em 0;
         }
 
         .separator {
@@ -88,7 +92,8 @@
         .links-section {
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: space-evenly;
+            flex-flow: wrap;
         }
 
         .link {
@@ -111,8 +116,40 @@
             content: "\ea01";
         }
 
+        .link-icon-github::before {
+            content: "\ea03";
+        }
+
+        .link-icon-linkedin::before {
+            content: "\ea06";
+        }
+
+        .link-icon-phone::before {
+            content: "\ea09";
+        }
+
+        .link-icon-email::before {
+            content: "\ea07";
+        }
+
         .link:hover .link-icon-download::before {
             content: "\ea02";
+        }
+
+        .link:hover .link-icon-github::before {
+            content: "\ea04";
+        }
+
+        .link:hover .link-icon-linkedin::before {
+            content: "\ea05";
+        }
+
+        .link:hover .link-icon-phone::before {
+            content: "\ea0a";
+        }
+
+        .link:hover .link-icon-email::before {
+            content: "\ea08";
         }
 
         .link-label {
@@ -128,6 +165,7 @@
         <header class="header">
             <h1>Nikola Hristov</h1>
             <div class="email">hristovnikola@protonmail.com</div>
+            <div class="phone">+359894440089</div>
         </header>
         <section class="about-section">
             <img class="profile-picture" src="images/profile.png" />
@@ -143,9 +181,25 @@
         </section>
         <div class="separator"></div>
         <section class="links-section">
-            <a class="link" href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf">
+            <a class="link" target="_blank" href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf">
                 <i class="link-icon link-icon-download"></i>
                 <div class="link-label">Download</div>
+            </a>
+            <a class="link" target="_blank" href="https://github.com/NikolaBorislavovHristov">
+                <i class="link-icon link-icon-github"></i>
+                <div class="link-label">Github</div>
+            </a>
+            <a class="link" target="_blank" href="https://www.linkedin.com/in/nikola-hristov-26873b125/">
+                <i class="link-icon link-icon-linkedin"></i>
+                <div class="link-label">Linkedin</div>
+            </a>
+            <a class="link" target="_blank" href="mailto:hristovnikola@protonmail.com">
+                <i class="link-icon link-icon-email"></i>
+                <div class="link-label">Email</div>
+            </a>
+            <a class="link" target="_blank" href="tel:+359894440089">
+                <i class="link-icon link-icon-phone"></i>
+                <div class="link-label">Phone</div>
             </a>
         </section>
         <div class="separator"></div>
