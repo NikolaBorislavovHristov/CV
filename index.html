@@ -71,7 +71,10 @@
 
         .about-section {
             display: flex;
+            flex-direction: row;
+            justify-content: center;
             align-items: flex-start;
+            flex-wrap: wrap;
         }
 
         .profile-picture {
@@ -165,6 +168,19 @@
         .last-updated {
             margin: 2em 0;
             text-align: right;
+        }
+
+        @media screen and (max-width: 900px) {
+            .profile-picture {
+                width: 350px;
+                height: 350px;
+            }
+
+            .about-label {
+                flex-basis: 100%;
+                padding-left: 0em;
+                padding-top: 2em;
+            }
         }
     </style>
 </head>
