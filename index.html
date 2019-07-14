@@ -5,10 +5,28 @@
     <meta charset="UTF-8">
     <title>Nikola Hristov</title>
     <style>
+        @font-face {
+            font-family: "Icons";
+            src: url("fonts/icons.woff2") format("woff2"), url("fonts/icons.woff") format("woff"), url("fonts/icons.ttf") format("truetype");
+            font-style: normal;
+            font-weight: 400;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            color: inherit;
+            border: none;
+            list-style: none;
+            text-decoration: none;
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+            background: none;
+            box-shadow: none;
+            overflow: hidden;
+            word-break: break-word;
         }
 
         ::selection {
@@ -19,8 +37,17 @@
             font-size: 12px;
             font-family: monospace;
             padding: 0 2em;
-            word-break: break-word;
             background-color: #fafafa;
+        }
+
+        .icon {
+            font-family: "Icons";
+            font-style: normal;
+            line-height: 1em;
+        }
+
+        .icon-download::before {
+            content: "\ea01";
         }
 
         .root-container {
@@ -29,14 +56,13 @@
             margin: auto;
         }
 
-        .name {
+        .header {
             font-size: 3em;
             line-height: 3em;
             font-weight: normal;
         }
 
         .about-section {
-            width: 100%;
             display: flex;
             align-items: flex-start;
         }
@@ -54,14 +80,39 @@
             line-height: 1.4em;
             padding-left: 2em;
         }
+
+        .links-section {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .link {
+            font-size: 1.6em;
+            height: 6em;
+            width: 6em;
+            text-align: center;
+        }
+
+        .link-icon {
+            display: block;
+            width: 100%;
+            font-size: 4em;
+        }
+
+        .link-label {
+            line-height: 2em;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
     </style>
 </head>
 
 <body>
     <div class="root-container">
-        <h1 class="name">Nikola Hristov</h1>
+        <header class="header">Nikola Hristov</header>
         <section class="about-section">
-            <img class="profile-picture" src="profile.png" />
+            <img class="profile-picture" src="images/profile.png" />
             <p class="about-label">
                 Born on august 31, 1993 in Sofia, Bulgaria.
                 <br />
@@ -71,6 +122,12 @@
                 Most passionate about building applications that many people, including <u>me</u>, are using on a daily basis.
                 I'm also happy married and a father of a lovely boy.
             </p>
+        </section>
+        <section class="links-section">
+            <a class="link" href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf">
+                <i class="link-icon icon icon-download"></i>
+                <div class="link-label">Download</div>
+            </a>
         </section>
         <!-- github
         linkedin
